@@ -1,10 +1,11 @@
-## Welcome to GitHub Pages
+## Visualisation du réseau des données publications.
 
-You can use the [editor on GitHub](https://github.com/AlexandreBihi/ProjetMongoDB/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Visualisation du graphe des réseaux issus des données de la base de données publications. Les réseaux les moins connectés sont colorés en rouge tandis que les réseaux les plus connectés sont plus clair voire même blanc pour les plus connectés.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+
+
+## Markdown
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
