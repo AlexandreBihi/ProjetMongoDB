@@ -15,5 +15,5 @@ La visualisation est disponible <a href="NYfood.html" title="ICI">ici</a>
 
 ## Visualisation des données de la base doctolib
 
-Visualisation des données de la base doctolib en affichant sur une carte les centres de vaccination situés aux alentours de Rennes avec une icône colorée en fonction du nombre de places disponibles pour se faire vacciner.
+Visualisation des données de la base doctolib en affichant sur une carte les centres de vaccination situés aux alentours de Rennes avec une icône colorée en fonction du nombre de places disponibles pour se faire vacciner. La visualisation est disponible <a href="map-docto.html" title="ICI">ici</a>
 
