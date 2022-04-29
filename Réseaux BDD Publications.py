@@ -3,7 +3,8 @@ from bokeh.io import output_notebook, show, save
 import networkx as nx
 from bokeh.plotting import figure, output_file, show,ColumnDataSource,from_networkx
 from bokeh.models import Range1d, Circle, ColumnDataSource, MultiLine
-from bokeh.models import EdgesAndLinkedNodes, NodesAndLinkedEdges
+from bokeh.models import EdgesAndLinkedNodes, NodesAndLinkedEdges,Div
+from bokeh.layouts import row, column
 from bokeh.palettes import Blues8, Reds8, Purples8, Oranges8, Viridis8, Spectral8
 from bokeh.transform import linear_cmap
     
@@ -157,9 +158,28 @@ network_graph.edge_renderer.glyph = MultiLine(line_alpha=0.5, line_width=1)
 
 plot.renderers.append(network_graph)
 
-show(plot)
+div = Div(text="""
+<h1>Projet MongoDB- Réseau de la base publications<h1>
+<h2> Présentation du graphe: </h2>
+<p>Le travail s'est concentré sur les 20 auteurs les plus prolifiques de la base. J'ai ensuite déterminé, via une requête mongoDB, la liste d'article en commun pour chaque auteur de la base. De là j'ai pu en déduire et construire le graphe et obtenir le réseau ci-dessous : </p>
+""")
+
+description_graphe = Div(text="""
+<p><b>Description: </b> Les noeuds du graphe sont colorés en fonction de leur connexion aux autres noeuds: plus un noeud est rouge moins il est connecté et à l'inverse, plus un noeud est pâle voire blanc plus il est connecté aux autres individus.</p>
+<p>On voit que certains noeuds sont complétement isolés et donc complétement rouges puisqu'ils n'ont aucune connexion</p>
+""",width=500)
+
+plot = row(plot,description_graphe)
+layout = column(div,plot)
+
+
+
+
+output_file('Reseau.html')
+show(layout)
 #save(plot, filename=f"{title}.html")
 
 
 degrees = dict(nx.degree(G))
 nx.set_node_attributes(G, name='degree', values=degrees)
+
