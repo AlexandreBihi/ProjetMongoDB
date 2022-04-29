@@ -1,6 +1,7 @@
 ## Visualisation du réseau des données publications.
 
 Visualisation du graphe des réseaux issus des données de la base de données publications. Les réseaux les moins connectés sont colorés en rouge tandis que les réseaux les plus connectés sont plus clair voire même blanc pour les plus connectés.
+La visualisation est disponible ici : <a href="reseau.html" title="ICI">Reseau</a>
 
 
 
