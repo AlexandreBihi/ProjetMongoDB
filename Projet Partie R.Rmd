@@ -1,0 +1,78 @@
+---
+title: "Projet Partie R"
+author: "Alexandre Bihi"
+date: "29/04/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+library(leaflet)
+library(htmlwidgets)
+```
+
+
+## Connexion à la base de données:
+
+
+```{r cars}
+url="mongodb://etudiant:ur2@clusterm1-shard-00-00.0rm7t.mongodb.net:27017,clusterm1-shard-00-01.0rm7t.mongodb.net:27017,clusterm1-shard-00-02.0rm7t.mongodb.net:27017/?ssl=true&replicaSet=atlas-l4xi61-shard-0"
+
+mdb = mongo(collection="dump_Jan2022", db="doctolib",
+            url=url,
+            verbose=TRUE)
+```
+
+## Récupération des centres de vaccination:
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+data_brutes<-mdb$find(query = '{"location" : {"$near" : {"$geometry" :  {"type": "Point","coordinates": [-1.6782316362621923,48.11711641615187]},"$maxDistance":50000}}}',fields='{"_id":true,"visit_motives":true,"location":true}')
+longitude_latitude<-as.character(data_brutes[,2][,2])
+
+
+
+data_brutes["longitude"]<-substr(longitude_latitude,13,18)
+data_brutes["latitude"]<-substr(longitude_latitude,3,10)
+
+```
+## Création de la carte des centres de vaccination:
+
+```{r}
+Rennes = c(-1.6782316362621923,48.11711641615187)
+m2 <- leaflet() %>% setView(lng = Rennes[1], lat = Rennes[2], zoom = 12) %>% 
+  addTiles()
+
+
+map_docto <- leaflet(data = data_brutes) %>% addTiles() %>%
+  addMarkers(~as.double(latitude), ~as.double(longitude))
+```
+
+
+## Extraction du nombre de places par centre de vaccination :
+
+```{r}
+query = { {$unwind: $visit_motives},
+                          {$unwind: $visit_motives.slots},
+                          {$match:{visit_motives.name:{$regex:"1re"}}},
+                          {$match:{visit_motives.slots:{$gte:{$date:"2022-01-01T00:00:00Z"}},
+                          visit_motives.slots:{$lt:{$date:2022-06-02T00:00:00Z}}}},
+                          {$group:{_id:$_id,nb:{$sum:1}}}]
+                      )}
+```
+
+## Export de la carte au format html:
+
+```{r}
+saveWidget(map_docto, file="map-docto.html")
+
+```
+
+
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
