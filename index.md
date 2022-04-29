@@ -9,7 +9,7 @@ La visualisation est disponible : <a href="Reseau.html" title="ICI">ici</a>
 ## Visualisation des données de la base NYfood
 
 Visualisation des données sur les restaurants issus de la collection NYfood de la base de données food. Deux graphiques : l'un permettant de voir la distribution des types de restaurants sur l'ensemble des données avec un pie chart et l'autre permettant une visualisation des types de restaurants par quartier.
-La visualisation est disponible <a href="Reseau.html" title="ICI">ici</a>
+La visualisation est disponible <a href="NYfood.html" title="ICI">ici</a>
 
 
 
