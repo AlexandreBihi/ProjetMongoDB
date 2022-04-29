@@ -1,0 +1,86 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    
+      <meta charset="utf-8">
+      <title>Bokeh Plot</title>
+      
+      
+        
+          
+        
+        
+          
+        <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-2.4.2.min.js"></script>
+        <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-widgets-2.4.2.min.js"></script>
+        <script type="text/javascript">
+            Bokeh.set_log_level("info");
+        </script>
+        
+      
+      
+    
+  </head>
+  
+  
+  <body>
+    
+      
+        
+          
+          
+            
+              <div class="bk-root" id="460fe483-ab5c-4eb7-86e9-1e0d516567f1" data-root-id="4541"></div>
+            
+          
+        
+      
+      
+        <script type="application/json" id="4758">
+          {"342d0666-5a10-4aaa-b6ed-bb3a67b8abc3":{"defs":[],"roots":{"references":[{"attributes":{"data":{"fill_color":["#3182bd","#6baed6","#9ecae1","#c6dbef","#e6550d","#fd8d3c","#fdae6b","#fdd0a2","#31a354","#74c476","#a1d99b","#c7e9c0"],"hatch_color":["#3182bd","#6baed6","#9ecae1","#c6dbef","#e6550d","#fd8d3c","#fdae6b","#fdd0a2","#31a354","#74c476","#a1d99b","#c7e9c0"],"line_color":["#3182bd","#6baed6","#9ecae1","#c6dbef","#e6550d","#fd8d3c","#fdae6b","#fdd0a2","#31a354","#74c476","#a1d99b","#c7e9c0"],"top":[3.799546998867497,3.8664185277088503,3.3336079077429983,4.039552880481513,4.059869036482694,0.4836795252225519,4.5058823529411764,3.8263157894736843,3.942970822281167,4.157742402315485,3.9771689497716896,3.28414442700157],"x":["American ","Chinese","Caf\u00e9/Coffee/Tea","Pizza","Italian","Other","Latin","Japanese","Mexican","Bakery","Caribbean","Spanish"]},"selected":{"id":"4559"},"selection_policy":{"id":"4558"}},"id":"4531","type":"ColumnDataSource"},{"attributes":{},"id":"4522","type":"CategoricalTicker"},{"attributes":{"callback":null,"tooltips":[["Type","@categorie"],["Value","@value"]]},"id":"4485","type":"HoverTool"},{"attributes":{},"id":"4505","type":"Selection"},{"attributes":{},"id":"4469","type":"DataRange1d"},{"attributes":{"coordinates":null,"group":null,"text":"Notes moyennes des diff\u00e9rents types de restaurants"},"id":"4511","type":"Title"},{"attributes":{},"id":"4504","type":"UnionRenderers"},{"attributes":{},"id":"4517","type":"CategoricalScale"},{"attributes":{"coordinates":null,"data_source":{"id":"4531"},"glyph":{"id":"4532"},"group":null,"hover_glyph":null,"muted_glyph":{"id":"4534"},"nonselection_glyph":{"id":"4533"},"view":{"id":"4536"}},"id":"4535","type":"GlyphRenderer"},{"attributes":{},"id":"4482","type":"BasicTicker"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"field":"fill_color"},"hatch_alpha":{"value":0.1},"hatch_color":{"field":"hatch_color"},"line_alpha":{"value":0.1},"line_color":{"field":"line_color"},"top":{"field":"top"},"width":{"value":0.9},"x":{"field":"x"}},"id":"4533","type":"VBar"},{"attributes":{"children":[{"id":"4510"},{"id":"4537"}]},"id":"4538","type":"Column"},{"attributes":{},"id":"4519","type":"LinearScale"},{"attributes":{},"id":"4525","type":"BasicTicker"},{"attributes":{"field":"angle","include_zero":true},"id":"4488","type":"CumSum"},{"attributes":{"text":"\n&lt;h1&gt;Projet MongoDB- Analyse de la base \"food\"&lt;h1&gt;\n&lt;h2&gt; Visualisation des donn\u00e9es &lt;/h2&gt;\n&lt;p&gt;Le travail s'est concentr\u00e9 sur les 20 cat\u00e9gories les plus populaires de la base. J'ai ensuite d\u00e9termin\u00e9, via une requ\u00eate mongoDB, les notes moyennes pour chaque cat\u00e9gorie retenue. De l\u00e0 j'ai pu en d\u00e9duire et construire les graphes ci-dessous : &lt;/p&gt;\n"},"id":"4539","type":"Div"},{"attributes":{"children":[{"id":"4466"},{"id":"4508"}]},"id":"4509","type":"Column"},{"attributes":{},"id":"4473","type":"LinearScale"},{"attributes":{"tools":[{"id":"4485"}]},"id":"4486","type":"Toolbar"},{"attributes":{"text":"\n&lt;p&gt;&lt;b&gt;Description: &lt;/b&gt; Repr\u00e9sentation de la proportion des 20 cat\u00e9gories de restaurants les plus populaires&lt;/p&gt;\n&lt;/p&gt;On voit que la cat\u00e9gorie American est tr\u00e8s pr\u00e9sente avec pr\u00e8s d'un tiers des restaurants.&lt;/p&gt;\n","width":500},"id":"4508","type":"Div"},{"attributes":{"source":{"id":"4490"}},"id":"4496","type":"CDSView"},{"attributes":{"axis":{"id":"4481"},"coordinates":null,"dimension":1,"grid_line_color":null,"group":null,"ticker":null},"id":"4484","type":"Grid"},{"attributes":{"axis":{"id":"4524"},"coordinates":null,"dimension":1,"group":null,"ticker":null},"id":"4527","type":"Grid"},{"attributes":{"end_angle":{"expr":{"id":"4489"}},"fill_alpha":{"value":0.1},"fill_color":{"field":"color"},"hatch_alpha":{"value":0.1},"line_alpha":{"value":0.1},"line_color":{"value":"white"},"radius":{"value":0.4},"start_angle":{"expr":{"id":"4488"}},"x":{"value":0},"y":{"value":1}},"id":"4493","type":"Wedge"},{"attributes":{"children":[{"id":"4539"},{"id":"4540"}]},"id":"4541","type":"Column"},{"attributes":{"factors":["American ","Chinese","Caf\u00e9/Coffee/Tea","Pizza","Italian","Other","Latin","Japanese","Mexican","Bakery","Caribbean","Spanish"]},"id":"4513","type":"FactorRange"},{"attributes":{},"id":"4555","type":"AllLabels"},{"attributes":{},"id":"4558","type":"UnionRenderers"},{"attributes":{"below":[{"id":"4521"}],"center":[{"id":"4523"},{"id":"4527"}],"height":250,"left":[{"id":"4524"}],"renderers":[{"id":"4535"}],"title":{"id":"4511"},"toolbar":{"id":"4528"},"toolbar_location":null,"x_range":{"id":"4513"},"x_scale":{"id":"4517"},"y_range":{"id":"4515"},"y_scale":{"id":"4519"}},"id":"4510","subtype":"Figure","type":"Plot"},{"attributes":{"coordinates":null,"group":null,"text":"R\u00e9partition des restaurants par type"},"id":"4467","type":"Title"},{"attributes":{},"id":"4502","type":"BasicTickFormatter"},{"attributes":{"label":{"field":"categorie"},"renderers":[{"id":"4495"}]},"id":"4507","type":"LegendItem"},{"attributes":{"tools":[{"id":"4529"}]},"id":"4528","type":"Toolbar"},{"attributes":{"end_angle":{"expr":{"id":"4489"}},"fill_color":{"field":"color"},"line_color":{"value":"white"},"radius":{"value":0.4},"start_angle":{"expr":{"id":"4488"}},"x":{"value":0},"y":{"value":1}},"id":"4492","type":"Wedge"},{"attributes":{},"id":"4478","type":"BasicTicker"},{"attributes":{"field":"angle"},"id":"4489","type":"CumSum"},{"attributes":{},"id":"4471","type":"DataRange1d"},{"attributes":{},"id":"4551","type":"BasicTickFormatter"},{"attributes":{"data":{"angle":{"__ndarray__":"QwnEpMXZAUDPQI0Mwu7rP0U9eL5UDNw/A/u0p6/e2j8GpNmWtrLYP+6ZAIeqW9c/oaULJmqj0z9o5YWjGY/RP0KDBc6ca9E/aPmCGPztzz9n9tOkylvOP78SfBU1b80/","dtype":"float64","order":"little","shape":[12]},"categorie":["American ","Chinese","Caf\u00e9/Coffee/Tea","Pizza","Italian","Other","Latin","Japanese","Mexican","Bakery","Caribbean","Spanish"],"color":["#3182bd","#6baed6","#9ecae1","#c6dbef","#e6550d","#fd8d3c","#fdae6b","#fdd0a2","#31a354","#74c476","#a1d99b","#c7e9c0"],"index":["0","1","2","3","4","5","6","7","8","9","10","11"],"value":[6181,2418,1214,1163,1069,1011,850,760,754,691,657,637]},"selected":{"id":"4505"},"selection_policy":{"id":"4504"}},"id":"4490","type":"ColumnDataSource"},{"attributes":{},"id":"4552","type":"AllLabels"},{"attributes":{},"id":"4559","type":"Selection"},{"attributes":{},"id":"4515","type":"DataRange1d"},{"attributes":{},"id":"4554","type":"CategoricalTickFormatter"},{"attributes":{"children":[{"id":"4509"},{"id":"4538"}]},"id":"4540","type":"Row"},{"attributes":{"below":[{"id":"4477"}],"center":[{"id":"4480"},{"id":"4484"},{"id":"4506"}],"height":350,"left":[{"id":"4481"}],"renderers":[{"id":"4495"}],"title":{"id":"4467"},"toolbar":{"id":"4486"},"toolbar_location":null,"x_range":{"id":"4469"},"x_scale":{"id":"4473"},"y_range":{"id":"4471"},"y_scale":{"id":"4475"}},"id":"4466","subtype":"Figure","type":"Plot"},{"attributes":{"text":"\n&lt;p&gt;&lt;b&gt;Description: &lt;/b&gt; Repr\u00e9sentation des notes moyennes par type de restaurants parmi les 20 plus populaires de la base de donn\u00e9es&lt;/p&gt;\n&lt;/p&gt;On voit que pour la cat\u00e9gorie other il y a une valeur extr\u00eame tr\u00e8s inf\u00e9rieure aux autres moyennes.&lt;/p&gt;\n","width":500},"id":"4537","type":"Div"},{"attributes":{"coordinates":null,"formatter":{"id":"4554"},"group":null,"major_label_policy":{"id":"4555"},"ticker":{"id":"4522"}},"id":"4521","type":"CategoricalAxis"},{"attributes":{"source":{"id":"4531"}},"id":"4536","type":"CDSView"},{"attributes":{"end_angle":{"expr":{"id":"4489"}},"fill_alpha":{"value":0.2},"fill_color":{"field":"color"},"hatch_alpha":{"value":0.2},"line_alpha":{"value":0.2},"line_color":{"value":"white"},"radius":{"value":0.4},"start_angle":{"expr":{"id":"4488"}},"x":{"value":0},"y":{"value":1}},"id":"4494","type":"Wedge"},{"attributes":{"fill_color":{"field":"fill_color"},"hatch_color":{"field":"hatch_color"},"line_color":{"field":"line_color"},"top":{"field":"top"},"width":{"value":0.9},"x":{"field":"x"}},"id":"4532","type":"VBar"},{"attributes":{},"id":"4503","type":"AllLabels"},{"attributes":{"coordinates":null,"data_source":{"id":"4490"},"glyph":{"id":"4492"},"group":null,"hover_glyph":null,"muted_glyph":{"id":"4494"},"nonselection_glyph":{"id":"4493"},"view":{"id":"4496"}},"id":"4495","type":"GlyphRenderer"},{"attributes":{"coordinates":null,"formatter":{"id":"4502"},"group":null,"major_label_policy":{"id":"4503"},"ticker":{"id":"4478"},"visible":false},"id":"4477","type":"LinearAxis"},{"attributes":{"axis":{"id":"4477"},"coordinates":null,"grid_line_color":null,"group":null,"ticker":null},"id":"4480","type":"Grid"},{"attributes":{"axis":{"id":"4521"},"coordinates":null,"group":null,"ticker":null},"id":"4523","type":"Grid"},{"attributes":{"fill_alpha":{"value":0.2},"fill_color":{"field":"fill_color"},"hatch_alpha":{"value":0.2},"hatch_color":{"field":"hatch_color"},"line_alpha":{"value":0.2},"line_color":{"field":"line_color"},"top":{"field":"top"},"width":{"value":0.9},"x":{"field":"x"}},"id":"4534","type":"VBar"},{"attributes":{"callback":null,"tooltips":[["Type de restaurant","@x"]]},"id":"4529","type":"HoverTool"},{"attributes":{"coordinates":null,"group":null,"items":[{"id":"4507"}]},"id":"4506","type":"Legend"},{"attributes":{"coordinates":null,"formatter":{"id":"4551"},"group":null,"major_label_policy":{"id":"4552"},"ticker":{"id":"4525"}},"id":"4524","type":"LinearAxis"},{"attributes":{},"id":"4499","type":"BasicTickFormatter"},{"attributes":{},"id":"4500","type":"AllLabels"},{"attributes":{},"id":"4475","type":"LinearScale"},{"attributes":{"coordinates":null,"formatter":{"id":"4499"},"group":null,"major_label_policy":{"id":"4500"},"ticker":{"id":"4482"},"visible":false},"id":"4481","type":"LinearAxis"}],"root_ids":["4541"]},"title":"Bokeh Application","version":"2.4.2"}}
+        </script>
+        <script type="text/javascript">
+          (function() {
+            const fn = function() {
+              Bokeh.safely(function() {
+                (function(root) {
+                  function embed_document(root) {
+                    
+                  const docs_json = document.getElementById('4758').textContent;
+                  const render_items = [{"docid":"342d0666-5a10-4aaa-b6ed-bb3a67b8abc3","root_ids":["4541"],"roots":{"4541":"460fe483-ab5c-4eb7-86e9-1e0d516567f1"}}];
+                  root.Bokeh.embed.embed_items(docs_json, render_items);
+                
+                  }
+                  if (root.Bokeh !== undefined) {
+                    embed_document(root);
+                  } else {
+                    let attempts = 0;
+                    const timer = setInterval(function(root) {
+                      if (root.Bokeh !== undefined) {
+                        clearInterval(timer);
+                        embed_document(root);
+                      } else {
+                        attempts++;
+                        if (attempts > 100) {
+                          clearInterval(timer);
+                          console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+                        }
+                      }
+                    }, 10, root)
+                  }
+                })(window);
+              });
+            };
+            if (document.readyState != "loading") fn();
+            else document.addEventListener("DOMContentLoaded", fn);
+          })();
+        </script>
+    
+  </body>
+  
+</html>
